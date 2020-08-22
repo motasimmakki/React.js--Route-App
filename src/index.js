@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Router, Route, browserHistory } from 'react-router';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={browserHistory}>
+      <Route path="/" component={App}></Route>
+    </Router>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
